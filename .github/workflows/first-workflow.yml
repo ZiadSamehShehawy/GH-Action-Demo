@@ -1,0 +1,13 @@
+name: first workflow
+on:
+    push:
+        branches:
+            - "main"
+jobs:
+    first-workf;ow-jop:
+        name: first-jop
+        runs-on: ubuntu-latest
+        steps:
+            - name: run bash command
+              run: echo "elzoz"
+              shell: bash
