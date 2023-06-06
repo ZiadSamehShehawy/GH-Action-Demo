@@ -13,7 +13,7 @@ jobs:
               shell: bash
 
             - name: checkout step
-              uses: action/checkout@3
+              uses: actions/checkout@v3
 
             - name: after checkout
               run: ls
