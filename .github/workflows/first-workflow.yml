@@ -4,8 +4,8 @@ on:
         branches:
             - "main"
 jobs:
-    first-workf;ow-jop:
-        name: first-jop
+    first_workflow_job:
+        name: first-jop      
         runs-on: ubuntu-latest
         steps:
             - name: run bash command
