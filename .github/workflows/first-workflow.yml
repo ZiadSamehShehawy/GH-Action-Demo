@@ -8,6 +8,14 @@ jobs:
         name: first-jop      
         runs-on: ubuntu-latest
         steps:
-            - name: run bash command
-              run: echo "elzoz"
+            - name: before checkout action
+              run: ls
+              shell: bash
+
+            - name: checkout step
+              uses: action/checkout@3
+
+            - name: after checkout
+              run: ls
+              shell: bash
               
