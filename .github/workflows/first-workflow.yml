@@ -1,14 +1,19 @@
 name: first workflow
 on:
-  repository_dispatch: 
-    types: [test]
-  push:
-    branches:
-      - "main"
-  pull_request: 
-    branches:
-      - "feature"
-    types: [opened, closed]
+  workflow_dispatch:
+    inputs:
+      versionName:
+        required: true
+        description: "this is version name for github workflow"
+#  repository_dispatch: 
+#    types: [test]
+#  push:
+#    branches:
+#      - "main"
+#  pull_request: 
+#    branches:
+#      - "feature"
+#    types: [opened, closed]
 jobs:
   first_workflow_job:
     name: first-job      
