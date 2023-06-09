@@ -11,6 +11,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: First WF
-              run: ls
+              run: ll
               shell: bash
               
