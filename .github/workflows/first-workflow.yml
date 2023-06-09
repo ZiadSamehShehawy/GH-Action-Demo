@@ -2,15 +2,17 @@ name: first workflow
 on:
   repository_dispatch: 
     types: [test]
-    push:
-        branches:
-            - "main"
+  push:
+    branches:
+      - "main"
+  pull_request: 
+    branches:
+      - "feature"
+    types: [opened, closed]
 jobs:
-    first_workflow_job:
-        name: first-jop      
-        runs-on: ubuntu-latest
-        steps:
-            - name: First WF
-              run: ll
-              shell: bash
-              
+  first_workflow_job:
+    name: first-job      
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run echo command
+        run: echo "elzoz"
