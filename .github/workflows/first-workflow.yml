@@ -10,14 +10,7 @@ jobs:
         name: first-jop      
         runs-on: ubuntu-latest
         steps:
-            - name: before checkout action
-              run: ls
-              shell: bash
-
-            - name: checkout step
-              uses: actions/checkout@v3
-
-            - name: after checkout
+            - name: First WF
               run: ls
               shell: bash
               
