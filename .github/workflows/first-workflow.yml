@@ -1,12 +1,14 @@
 name: first workflow
 on:
-  workflow_dispatch:
-    inputs:
-      versionName:
-        required: true
-        description: "this is version name for github workflow"
+  push
+#  workflow_dispatch:
+#    inputs:
+#      versionName:
+#        required: true
+#        description: "this is version name for github workflow"
 #  repository_dispatch: 
 #    types: [test]
+
 #  push:
 #    branches:
 #      - "main"
@@ -14,10 +16,13 @@ on:
 #    branches:
 #      - "feature"
 #    types: [opened, closed]
+
 jobs:
   first_workflow_job:
     name: first-job      
     runs-on: ubuntu-latest
     steps:
       - name: Run echo command
+        if: github.ref== 'refs/head/feature'
         run: echo "elzoz"
+        shell: bash
