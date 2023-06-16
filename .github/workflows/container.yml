@@ -1,0 +1,14 @@
+
+  name: second
+  on:
+    push
+  jobs:
+    run_con:
+        name: con_wit_image
+        runs-on: ubuntu:latest
+        container:
+            image: node:14.16
+        steps:
+            - name: print version container
+              run: node -v
+
